@@ -1,0 +1,26 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: junit:junit
+    versions:
+    - 4.13.2
+  - dependency-name: org.apache.maven:maven-core
+    versions:
+    - 3.8.1
+  - dependency-name: org.fusesource.jansi:jansi
+    versions:
+    - 2.3.1
+    - 2.3.2
+  - dependency-name: commons-io:commons-io
+    versions:
+    - "2.7"
+    - 2.8.0
+  - dependency-name: org.apache.commons:commons-text
+    versions:
+    - "1.8"
